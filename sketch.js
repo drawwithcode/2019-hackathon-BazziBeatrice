@@ -13,6 +13,8 @@ var spin = 0.1;
 // var grow = spin * 5;
 var grow = spin;
 
+
+
 function preload() {
   song = loadSound("./assets/TG1_bumper.mp3");
   img = loadImage("./assets/tg1.png");
@@ -21,6 +23,10 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight)
+  // 
+  // fft = new p5.FFT(0.9, 1024);
+  // fft.setInput(song);
+
 
   background(0);
   //song
@@ -65,12 +71,15 @@ function draw() {
   text("CLICK TO PLAY/PAUSE THE INTRO", windowWidth / 2, windowHeight / 1.14);
   pop();
 
-
-
   volume = analyzer.getLevel();
   volume = map(volume, 0, 1, 0, height);
   console.log("amplitude:" + analyzer.getLevel());
   console.log("var volume:" + volume);
+
+// //immagine che appare solo nelle note alte
+//   let spectrum = fft.analyze();
+//   let myhighMid = fft.getEnergy("highMid");
+//   image(img3, 0, 0, myhighMid);
 
   //funzione spirale
   push();
