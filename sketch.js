@@ -33,7 +33,6 @@ function setup() {
 }
 
 function draw() {
-
   //rectMode(mode)
     push();
     fill(0,58,108);
