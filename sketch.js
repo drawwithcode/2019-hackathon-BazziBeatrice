@@ -14,7 +14,7 @@ var spin = 0.1;
 var grow = spin;
 
 function preload() {
-  song = loadSound("/assets/TG1_bumper.mp3");
+  song = loadSound("./assets/TG1_bumper.mp3");
   img = loadImage("./assets/tg1.png");
   img2 = loadImage("./assets/TG1LOGO.jpg");
 }
