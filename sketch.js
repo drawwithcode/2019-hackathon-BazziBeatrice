@@ -34,6 +34,40 @@ function setup() {
 
 function draw() {
 
+  //rectMode(mode)
+    push();
+    fill(0,58,108);
+    rect((windowWidth/2) - 100, (windowHeight / 1.1) -10, 200, 20)
+    pop();
+  //text
+  push();
+  textFont("Nunito Sans");
+  textStyle(400);
+  textAlign(CENTER, CENTER);
+  noStroke();
+  fill(255);
+  textSize(11);
+  text("PRESS ANY KEY TO REANIMATE", windowWidth / 2, windowHeight / 1.1);
+  pop();
+
+  //rectMode(mode)
+    push();
+    fill(0,58,108);
+    rect((windowWidth/2) - 100, (windowHeight / 1.14) -10, 200, 20)
+    pop();
+  //text
+  push();
+  textFont("Nunito Sans");
+  textStyle(400);
+  textAlign(CENTER, CENTER);
+  noStroke();
+  fill(255);
+  textSize(11);
+  text("CLICK TO PLAY/PAUSE THE INTRO", windowWidth / 2, windowHeight / 1.14);
+  pop();
+
+
+
   volume = analyzer.getLevel();
   volume = map(volume, 0, 1, 0, height);
   console.log("amplitude:" + analyzer.getLevel());
